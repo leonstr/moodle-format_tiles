@@ -68,7 +68,11 @@ class dynamic_styles {
         global $CFG, $PAGE;
         $courseid = $PAGE->course->id ?? 0;
         $data = self::data_for_template($courseid);
-        $m = new \Mustache_Engine();
+        if ($CFG->branch < 502) {
+            $m = new \Mustache_Engine();
+        } else {
+            $m = new \Mustache\Engine();
+        }
         return $m->render(
             file_get_contents("$CFG->dirroot/course/format/tiles/templates/dynamic_styles.mustache"),
             $data

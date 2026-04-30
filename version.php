@@ -29,4 +29,4 @@ $plugin->requires = 2025092600;    // Moodle 5.1.
 $plugin->component = 'format_tiles';  // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = "5.1.0.2";
-$plugin->supported = [501, 501]; // Supported Moodle version range.
+$plugin->supported = [501, 502]; // Supported Moodle version range.
