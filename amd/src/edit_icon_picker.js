@@ -295,12 +295,11 @@ define(["jquery", "core/templates", "core/ajax", "core/str", "core/notification"
                         tilenumbers: Array.from({length: maxNumberIcons + 1}, (e, i)=> i).filter((e) => e > 0),
                         wwwroot: config.wwwroot
                     }).done(function (iconsHTML) {
-                        require(["core/modal_factory"], function (modalFact) {
-                            modalFact.create({
-                                type: modalFact.types.DEFAULT,
+                        require(["core/modal"], function (coreModal) {
+                            coreModal.create({
                                 title: stringStore.pickAnIcon,
                                 body: iconsHTML
-                            }).done(function (modal) {
+                            }).then(function (modal) {
                                 modalStored = modal;
                                 modal.setLarge();
                                 modal.show();
