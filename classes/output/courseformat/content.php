@@ -156,7 +156,7 @@ class content extends content_base {
         );
         if ($inlinefolder) {
             $editurl = new \moodle_url('/course/modedit.php', ['update' => $inlinefolder->id]);
-            $link = \html_writer::link($editurl, $inlinefolder->name);
+            $link = \html_writer::link($editurl, format_string($inlinefolder->name));
             return get_string('folderdisplayerror', 'format_tiles', $link);
         }
         return null;
