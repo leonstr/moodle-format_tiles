@@ -106,7 +106,7 @@
         id="module-{{cmid}}" data-modtype="{{modname}}{{#modresourceicon}}_{{{modresourceicon}}}{{/modresourceicon}}"
         data-cmid="{{cmid}}" data-completion="{{completion}}"
         data-modinstance="{{modinstance}}" data-contextid="{{modcontextid}}"
-        data-title="{{{activityname}}}"
+        data-title="{{activityname}}"
         {{#modalType}}data-modal="{{modalType}}" {{/modalType}}
         {{#hascompletion}}data-completion-state="{{completionstate}}"{{/hascompletion}}
     >
@@ -114,7 +114,7 @@
             {{#clickable}}
                 <a href="{{url}}" {{#modalType}} data-action="launch-tiles-cm-modal"{{/modalType}}
                     {{#onclick}} onclick="{{{onclick}}}"{{/onclick}}
-                   data-title="{{{activityname}}}" class="cm-link {{{extraclasses}}}">
+                   data-title="{{activityname}}" class="cm-link {{{extraclasses}}}">
                     {{> format_tiles/course_module_subtile_inner}}
                 </a>
                 {{#modalDescriptionHTML}}

@@ -48,7 +48,7 @@
     {{! If we have tileicon but not icon, we are on a top level tile }}
     {{^icon}}{{#tileicon}}{{#pix}}tileicon/{{{tileicon}}}, format_tiles{{/pix}}{{/tileicon}}{{/icon}}
     {{! If we have icon but not tileicon, we are on a sub-tile }}
-    {{^tileicon}}{{#icon}}<img class="icon {{icon.iconclass}}" src="{{icon.url}}" alt="{{{icon.label}}}">{{/icon}}{{/tileicon}}
+    {{^tileicon}}{{#icon}}<img class="icon {{icon.iconclass}}" src="{{icon.url}}" alt="{{icon.label}}">{{/icon}}{{/tileicon}}
     {{! If we have neither, use a default icon }}
     {{^icon}}{{^tileicon}}{{#pix}}tileicon/{{{defaulttileicon}}}, format_tiles{{/pix}}{{/tileicon}}{{/icon}}
 </span>
